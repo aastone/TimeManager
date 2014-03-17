@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TMRootViewController.h"
 
 @interface TMAppDelegate : UIResponder <UIApplicationDelegate>
 

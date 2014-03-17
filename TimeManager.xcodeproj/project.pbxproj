@@ -19,6 +19,8 @@
 		03EDF90A18D6CC60007790B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EDF8F218D6CC60007790B6 /* UIKit.framework */; };
 		03EDF91218D6CC60007790B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03EDF91018D6CC60007790B6 /* InfoPlist.strings */; };
 		03EDF91418D6CC60007790B6 /* TimeManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDF91318D6CC60007790B6 /* TimeManagerTests.m */; };
+		03EDF92418D6CD94007790B6 /* TMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDF92218D6CD94007790B6 /* TMRootViewController.m */; };
+		03EDF92518D6CD94007790B6 /* TMRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EDF92318D6CD94007790B6 /* TMRootViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		03EDF90F18D6CC60007790B6 /* TimeManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeManagerTests-Info.plist"; sourceTree = "<group>"; };
 		03EDF91118D6CC60007790B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03EDF91318D6CC60007790B6 /* TimeManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeManagerTests.m; sourceTree = "<group>"; };
+		03EDF92118D6CD94007790B6 /* TMRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMRootViewController.h; sourceTree = "<group>"; };
+		03EDF92218D6CD94007790B6 /* TMRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMRootViewController.m; sourceTree = "<group>"; };
+		03EDF92318D6CD94007790B6 /* TMRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMRootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 		03EDF8F418D6CC60007790B6 /* TimeManager */ = {
 			isa = PBXGroup;
 			children = (
+				03EDF91D18D6CCF5007790B6 /* Classes */,
 				03EDF8FD18D6CC60007790B6 /* TMAppDelegate.h */,
 				03EDF8FE18D6CC60007790B6 /* TMAppDelegate.m */,
 				03EDF90018D6CC60007790B6 /* Images.xcassets */,
@@ -142,6 +148,40 @@
 				03EDF91018D6CC60007790B6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03EDF91D18D6CCF5007790B6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				03EDF92018D6CD29007790B6 /* Views */,
+				03EDF91F18D6CD1C007790B6 /* Models */,
+				03EDF91E18D6CD10007790B6 /* Controllers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		03EDF91E18D6CD10007790B6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03EDF92118D6CD94007790B6 /* TMRootViewController.h */,
+				03EDF92218D6CD94007790B6 /* TMRootViewController.m */,
+				03EDF92318D6CD94007790B6 /* TMRootViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		03EDF91F18D6CD1C007790B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		03EDF92018D6CD29007790B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03EDF92518D6CD94007790B6 /* TMRootViewController.xib in Resources */,
 				03EDF8F918D6CC60007790B6 /* InfoPlist.strings in Resources */,
 				03EDF90118D6CC60007790B6 /* Images.xcassets in Resources */,
 			);
@@ -242,6 +283,7 @@
 			files = (
 				03EDF8FB18D6CC60007790B6 /* main.m in Sources */,
 				03EDF8FF18D6CC60007790B6 /* TMAppDelegate.m in Sources */,
+				03EDF92418D6CD94007790B6 /* TMRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
