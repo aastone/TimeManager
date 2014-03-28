@@ -7,6 +7,7 @@
 //
 
 #import "TMAppDelegate.h"
+#import "TMDetailViewController.h"
 
 @implementation TMAppDelegate
 
@@ -14,8 +15,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    TMRootViewController *rootViewController = [[TMRootViewController alloc] init];
-    self.window.rootViewController = rootViewController;
+    TMRootTableViewController *rootViewController = [[TMRootTableViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    self.window.rootViewController = nav;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

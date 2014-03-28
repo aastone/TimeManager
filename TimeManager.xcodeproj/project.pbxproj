@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033893B218DE849B00A2F8BA /* TMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033893B018DE849B00A2F8BA /* TMDetailViewController.m */; };
+		033893B318DE849B00A2F8BA /* TMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033893B118DE849B00A2F8BA /* TMDetailViewController.xib */; };
+		0342220B18D7D77300320A3C /* TMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0342220A18D7D77300320A3C /* TMItem.m */; };
+		0342220E18D7D88900320A3C /* TMItemFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0342220D18D7D88900320A3C /* TMItemFrame.m */; };
+		0342221118D8149200320A3C /* TMItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0342221018D8149200320A3C /* TMItemCell.m */; };
+		039C9A4318DAC7BF0010CD6C /* TMRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039C9A4118DAC7BF0010CD6C /* TMRootTableViewController.m */; };
+		039C9A4418DAC7BF0010CD6C /* TMRootTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 039C9A4218DAC7BF0010CD6C /* TMRootTableViewController.xib */; };
+		039C9A4718DAE1850010CD6C /* TMItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 039C9A4618DAE1850010CD6C /* TMItemModel.m */; };
+		03AF9E0618E1685B00778C19 /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03AF9E0518E1685B00778C19 /* bg1.jpg */; };
 		03EDF8EF18D6CC60007790B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EDF8EE18D6CC60007790B6 /* Foundation.framework */; };
 		03EDF8F118D6CC60007790B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EDF8F018D6CC60007790B6 /* CoreGraphics.framework */; };
 		03EDF8F318D6CC60007790B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EDF8F218D6CC60007790B6 /* UIKit.framework */; };
@@ -19,8 +28,6 @@
 		03EDF90A18D6CC60007790B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EDF8F218D6CC60007790B6 /* UIKit.framework */; };
 		03EDF91218D6CC60007790B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03EDF91018D6CC60007790B6 /* InfoPlist.strings */; };
 		03EDF91418D6CC60007790B6 /* TimeManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDF91318D6CC60007790B6 /* TimeManagerTests.m */; };
-		03EDF92418D6CD94007790B6 /* TMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDF92218D6CD94007790B6 /* TMRootViewController.m */; };
-		03EDF92518D6CD94007790B6 /* TMRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EDF92318D6CD94007790B6 /* TMRootViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		033893AF18DE849B00A2F8BA /* TMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDetailViewController.h; sourceTree = "<group>"; };
+		033893B018DE849B00A2F8BA /* TMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDetailViewController.m; sourceTree = "<group>"; };
+		033893B118DE849B00A2F8BA /* TMDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMDetailViewController.xib; sourceTree = "<group>"; };
+		0342220918D7D77300320A3C /* TMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMItem.h; sourceTree = "<group>"; };
+		0342220A18D7D77300320A3C /* TMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMItem.m; sourceTree = "<group>"; };
+		0342220C18D7D88900320A3C /* TMItemFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMItemFrame.h; sourceTree = "<group>"; };
+		0342220D18D7D88900320A3C /* TMItemFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMItemFrame.m; sourceTree = "<group>"; };
+		0342220F18D8149200320A3C /* TMItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMItemCell.h; sourceTree = "<group>"; };
+		0342221018D8149200320A3C /* TMItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMItemCell.m; sourceTree = "<group>"; };
+		039C9A4018DAC7BF0010CD6C /* TMRootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMRootTableViewController.h; sourceTree = "<group>"; };
+		039C9A4118DAC7BF0010CD6C /* TMRootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMRootTableViewController.m; sourceTree = "<group>"; };
+		039C9A4218DAC7BF0010CD6C /* TMRootTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMRootTableViewController.xib; sourceTree = "<group>"; };
+		039C9A4518DAE1850010CD6C /* TMItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMItemModel.h; sourceTree = "<group>"; };
+		039C9A4618DAE1850010CD6C /* TMItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMItemModel.m; sourceTree = "<group>"; };
+		03AF9E0518E1685B00778C19 /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg1.jpg; path = ../../../../../Stone/new/images/bg1.jpg; sourceTree = "<group>"; };
 		03EDF8EB18D6CC60007790B6 /* TimeManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03EDF8EE18D6CC60007790B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03EDF8F018D6CC60007790B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,9 +72,6 @@
 		03EDF90F18D6CC60007790B6 /* TimeManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeManagerTests-Info.plist"; sourceTree = "<group>"; };
 		03EDF91118D6CC60007790B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03EDF91318D6CC60007790B6 /* TimeManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeManagerTests.m; sourceTree = "<group>"; };
-		03EDF92118D6CD94007790B6 /* TMRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMRootViewController.h; sourceTree = "<group>"; };
-		03EDF92218D6CD94007790B6 /* TMRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMRootViewController.m; sourceTree = "<group>"; };
-		03EDF92318D6CD94007790B6 /* TMRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMRootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03AF9E0418E1684A00778C19 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				03AF9E0518E1685B00778C19 /* bg1.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		03EDF8E218D6CC60007790B6 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +113,7 @@
 				03EDF90D18D6CC60007790B6 /* TimeManagerTests */,
 				03EDF8ED18D6CC60007790B6 /* Frameworks */,
 				03EDF8EC18D6CC60007790B6 /* Products */,
+				03AF9E0418E1684A00778C19 /* Images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,9 +191,12 @@
 		03EDF91E18D6CD10007790B6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				03EDF92118D6CD94007790B6 /* TMRootViewController.h */,
-				03EDF92218D6CD94007790B6 /* TMRootViewController.m */,
-				03EDF92318D6CD94007790B6 /* TMRootViewController.xib */,
+				039C9A4018DAC7BF0010CD6C /* TMRootTableViewController.h */,
+				039C9A4118DAC7BF0010CD6C /* TMRootTableViewController.m */,
+				039C9A4218DAC7BF0010CD6C /* TMRootTableViewController.xib */,
+				033893AF18DE849B00A2F8BA /* TMDetailViewController.h */,
+				033893B018DE849B00A2F8BA /* TMDetailViewController.m */,
+				033893B118DE849B00A2F8BA /* TMDetailViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +204,8 @@
 		03EDF91F18D6CD1C007790B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				039C9A4518DAE1850010CD6C /* TMItemModel.h */,
+				039C9A4618DAE1850010CD6C /* TMItemModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -180,6 +213,12 @@
 		03EDF92018D6CD29007790B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0342220918D7D77300320A3C /* TMItem.h */,
+				0342220A18D7D77300320A3C /* TMItem.m */,
+				0342220C18D7D88900320A3C /* TMItemFrame.h */,
+				0342220D18D7D88900320A3C /* TMItemFrame.m */,
+				0342220F18D8149200320A3C /* TMItemCell.h */,
+				0342221018D8149200320A3C /* TMItemCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -260,9 +299,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03EDF92518D6CD94007790B6 /* TMRootViewController.xib in Resources */,
+				03AF9E0618E1685B00778C19 /* bg1.jpg in Resources */,
 				03EDF8F918D6CC60007790B6 /* InfoPlist.strings in Resources */,
 				03EDF90118D6CC60007790B6 /* Images.xcassets in Resources */,
+				033893B318DE849B00A2F8BA /* TMDetailViewController.xib in Resources */,
+				039C9A4418DAC7BF0010CD6C /* TMRootTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,9 +322,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				039C9A4318DAC7BF0010CD6C /* TMRootTableViewController.m in Sources */,
+				039C9A4718DAE1850010CD6C /* TMItemModel.m in Sources */,
+				0342220E18D7D88900320A3C /* TMItemFrame.m in Sources */,
+				0342221118D8149200320A3C /* TMItemCell.m in Sources */,
 				03EDF8FB18D6CC60007790B6 /* main.m in Sources */,
 				03EDF8FF18D6CC60007790B6 /* TMAppDelegate.m in Sources */,
-				03EDF92418D6CD94007790B6 /* TMRootViewController.m in Sources */,
+				033893B218DE849B00A2F8BA /* TMDetailViewController.m in Sources */,
+				0342220B18D7D77300320A3C /* TMItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +532,7 @@
 				03EDF91918D6CC60007790B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03EDF91A18D6CC60007790B6 /* Build configuration list for PBXNativeTarget "TimeManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +541,7 @@
 				03EDF91C18D6CC60007790B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
