@@ -47,7 +47,7 @@
     //textfield init
     [self textFieldInit];
     
-    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
     tapGr.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapGr];
 }
@@ -60,7 +60,7 @@
 
 #pragma mark - Tap Gesture
 
-- (void)viewTapped:(UITapGestureRecognizer*)tapGr
+- (void)viewTapped
 {
     [self.textField resignFirstResponder];
 }

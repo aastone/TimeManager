@@ -12,31 +12,38 @@
 {
     NSInteger rowsInSection;
     NSMutableDictionary *itemsInfo;
-    NSArray *itemContent;
     NSMutableArray *itemTimeStart;
     TMItemModel *sub;
     NSInteger itemCount;
+    UITableView *tableView;
+    UITextField *textField;
+    NSMutableArray *itemContent;
 }
 
 @end
 
 @implementation TMRootTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
-        
+        //
     }
+    
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // 0
+    
+    
     itemCount = 0;
-    itemTimeStart = [NSMutableArray arrayWithObjects:@"2014-03-27",nil];
+    itemContent = [NSMutableArray arrayWithObjects:@"2014-03-27",nil];
+    
+   
     // 1
     self.screenHeight = [UIScreen mainScreen].bounds.size.height;
     
@@ -55,8 +62,12 @@
     [self.view addSubview:self.blurredImageView];
     
     // 4
-    [self textFieldInit];
+    
     [self tableViewInit];
+//    [self scrollViewInit];
+    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped)];
+    tapGr.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapGr];
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -87,22 +98,66 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Tap Gesture
+
+- (void)viewTapped
+{
+    if (textField.frame.origin.y >65.0) {
+        [textField resignFirstResponder];
+        [self textFieldInit];
+    }
+}
+
 #pragma mark - Text Field
 
 - (void)textFieldInit
 {
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(160, 300, 111, 30)];
-    textField.borderStyle = UITextBorderStyleRoundedRect;
-    textField.placeholder = @"placeholder";
-    [self.view addSubview:textField];
-    textField.delegate = self;
+    if (textField.frame.origin.y < -39.0) {
+        textField.frame = CGRectMake(0, 66.0, 320, 44);
+    }else if(textField.frame.origin.y >65.0){
+        NSLog(@"%f",textField.frame.origin.y);
+        textField.frame = CGRectMake(0, -40.0, 320, 44);
+    }else{
+        textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 66, 320, 44)];
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        textField.placeholder = @"placeholder";
+        [self.view addSubview:textField];
+        textField.delegate = self;
+    }
 }
 
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)atextField
+{
+    if (textField.frame.origin.y >65.0) {
+        [textField resignFirstResponder];
+        [self addNewItem];
+        [self textFieldInit];
+    }
+    return YES;
+}
+
+
 #pragma mark - Scroll view
+
+- (void)scrollViewInit
+{
+    CGRect bounds = [[UIScreen mainScreen] applicationFrame];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:bounds];
+    scrollView.contentSize = self.view.frame.size;
+    scrollView.delegate = self;
+    
+}
+
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if (self.tableView.contentOffset.y < 0) {
-        [self addNewItem];
+    NSLog(@"%f",tableView.contentOffset.y);
+    if (tableView.contentOffset.y < -30) {
+        [self textFieldInit];
     }
 }
 
@@ -122,30 +177,36 @@
     
     [itemTimeStart addObject:currentTime];
     
-//    NSLog(@"%@",itemTimeStart[itemCount]);
-    
     itemCount++;
-//    NSLog(@"%ld",(long)itemCount);
+}
+
+// 增加cell的内容
+- (void)addItemContent
+{
+    [itemContent addObject:textField.text];
+    itemCount ++;
 }
 
 - (void)addNewItem
 {
     rowsInSection = rowsInSection + 1;
-    [self addTimeLine];
-    [self.tableView reloadData];
+    [self addItemContent];
+    [tableView reloadData];
 }
 
 #pragma mark - Table view init
 
 - (void)tableViewInit
 {
-    self.tableView = [[UITableView alloc] init];
-    self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.2];
-    self.tableView.pagingEnabled = YES;
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    //    [self.view addSubview:self.tableView];
+    CGRect bounds = [[UIScreen mainScreen] applicationFrame];
+//    NSLog(@"%f-%f-%f-%f",bounds.origin.x, bounds.origin.y, bounds.size.height, bounds.size.width);
+    tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, bounds.origin.y + 9.0, bounds.size.width, bounds.size.height) style:UITableViewStyleGrouped];
+    tableView.backgroundColor = [UIColor clearColor];
+    tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.2];
+    tableView.pagingEnabled = YES;
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    [self.view addSubview:tableView];
 }
 
 
@@ -163,10 +224,10 @@
     return rowsInSection + 1;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)mtableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [mtableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
@@ -179,7 +240,7 @@
     
 //    cell.textLabel.text = [NSString stringWithFormat:@"section %ld, cell %ld", (long)indexPath.section, (long)indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", itemTimeStart[rowsInSection - indexPath.row]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", itemContent[rowsInSection - indexPath.row]];
 
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 30, 220, 15)];
     titleLabel.tag = 03;
@@ -248,7 +309,7 @@
     detailViewController.delegate = self;
     detailViewController.title = @"Detail";
     
-    passdata = [[NSString alloc] initWithFormat:@"%@",[itemTimeStart objectAtIndex:indexPath.row]];
+    passdata = [[NSString alloc] initWithFormat:@"%@",[itemContent objectAtIndex:indexPath.row]];
     
     detailViewController.listArray = [[NSMutableArray alloc] initWithObjects:passdata, nil];
     [self.navigationController pushViewController:detailViewController animated:YES];

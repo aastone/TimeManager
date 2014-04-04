@@ -10,12 +10,10 @@
 #import "TMItemModel.h"
 #import "TMDetailViewController.h"
 
-@interface TMRootTableViewController : UITableViewController<TMDetailViewControllerDelegate>
+@interface TMRootTableViewController : UIViewController<TMDetailViewControllerDelegate>
 {
     NSString *passdata;
 }
-
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, strong) UIImageView *blurredImageView;

@@ -12,6 +12,7 @@
 		0342220B18D7D77300320A3C /* TMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0342220A18D7D77300320A3C /* TMItem.m */; };
 		0342220E18D7D88900320A3C /* TMItemFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0342220D18D7D88900320A3C /* TMItemFrame.m */; };
 		0342221118D8149200320A3C /* TMItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0342221018D8149200320A3C /* TMItemCell.m */; };
+		036D208E18E55AA700F7A2DE /* TMPublicMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 036D208D18E55AA700F7A2DE /* TMPublicMethod.m */; };
 		039C9A4318DAC7BF0010CD6C /* TMRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039C9A4118DAC7BF0010CD6C /* TMRootTableViewController.m */; };
 		039C9A4418DAC7BF0010CD6C /* TMRootTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 039C9A4218DAC7BF0010CD6C /* TMRootTableViewController.xib */; };
 		039C9A4718DAE1850010CD6C /* TMItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 039C9A4618DAE1850010CD6C /* TMItemModel.m */; };
@@ -50,6 +51,8 @@
 		0342220D18D7D88900320A3C /* TMItemFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMItemFrame.m; sourceTree = "<group>"; };
 		0342220F18D8149200320A3C /* TMItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMItemCell.h; sourceTree = "<group>"; };
 		0342221018D8149200320A3C /* TMItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMItemCell.m; sourceTree = "<group>"; };
+		036D208C18E55AA700F7A2DE /* TMPublicMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPublicMethod.h; sourceTree = "<group>"; };
+		036D208D18E55AA700F7A2DE /* TMPublicMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPublicMethod.m; sourceTree = "<group>"; };
 		039C9A4018DAC7BF0010CD6C /* TMRootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMRootTableViewController.h; sourceTree = "<group>"; };
 		039C9A4118DAC7BF0010CD6C /* TMRootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMRootTableViewController.m; sourceTree = "<group>"; };
 		039C9A4218DAC7BF0010CD6C /* TMRootTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMRootTableViewController.xib; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 			children = (
 				039C9A4518DAE1850010CD6C /* TMItemModel.h */,
 				039C9A4618DAE1850010CD6C /* TMItemModel.m */,
+				036D208C18E55AA700F7A2DE /* TMPublicMethod.h */,
+				036D208D18E55AA700F7A2DE /* TMPublicMethod.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				0342220E18D7D88900320A3C /* TMItemFrame.m in Sources */,
 				0342221118D8149200320A3C /* TMItemCell.m in Sources */,
 				03EDF8FB18D6CC60007790B6 /* main.m in Sources */,
+				036D208E18E55AA700F7A2DE /* TMPublicMethod.m in Sources */,
 				03EDF8FF18D6CC60007790B6 /* TMAppDelegate.m in Sources */,
 				033893B218DE849B00A2F8BA /* TMDetailViewController.m in Sources */,
 				0342220B18D7D77300320A3C /* TMItem.m in Sources */,
